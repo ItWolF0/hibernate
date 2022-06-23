@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        new Configuration().configure(new File("hibernate.cfg.xml")).buildSessionFactory());
+        SessionFactory factory = HibernateUtils.getSessionFactory();
         Session session = factory.getCurrentSession();
         try {
             session.getTransaction().begin();
