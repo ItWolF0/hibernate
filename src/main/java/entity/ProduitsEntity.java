@@ -7,7 +7,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "produits", schema = "tp_hibernate", uniqueConstraints = @UniqueConstraint(columnNames = { "id" }))
 public class ProduitsEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Id
     @Column(name = "id")
     private int id;

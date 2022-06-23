@@ -8,7 +8,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "commande", schema = "tp_hibernate", uniqueConstraints = @UniqueConstraint(columnNames = { "id" }))
 public class CommandeEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Id
     @Column(name = "id")
     private int id;
